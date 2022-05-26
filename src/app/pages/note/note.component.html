@@ -1,0 +1,20 @@
+<div class="form-ctn">
+  <form (submit)="goingToCreate() ? updateNote() : createNewNote()">
+    <h2>Crear nota</h2>
+    <label for="title">
+      <span>Titulo:</span>
+      <input type="text"
+      [(ngModel)]="newNote.title"
+      id="title" name="title" required />
+    </label>
+    <label for="content">
+      <span>Contenido:</span>
+      <textarea type="text"
+      [(ngModel)]="newNote.content"
+      id="content" name="content" required
+      rows="4" >
+      </textarea>
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+</div>

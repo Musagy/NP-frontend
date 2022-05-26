@@ -1,0 +1,18 @@
+<div class="form-ctn">
+  <form (submit)="onLogin()">
+    <h2>Log In</h2>
+    <label for="usernameOrEmail">
+      <span>Email o Username:</span>
+      <input type="text"
+      [(ngModel)]="loginForm.usernameOrEmail"
+      id="usernameOrEmail" name="usernameOrEmail" required />
+    </label>
+    <label for="password">
+      <span>Contraseña:</span>
+      <input type="password"
+      [(ngModel)]="loginForm.password"
+      id="password" name="password" required />
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+</div>

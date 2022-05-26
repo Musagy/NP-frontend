@@ -1,0 +1,62 @@
+<div class="form-ctn">
+  <form (submit)="onLogup()">
+    <h2>Log up</h2>
+    <div class="input-ctn">
+      <label for="name">
+        <span>Nombre:</span>
+        <input
+          type="text"
+          [(ngModel)]="logupForm.name"
+          id="name"
+          name="name"
+          required
+        />
+      </label>
+
+      <label for="username">
+        <span>Username:</span>
+        <input
+          type="text"
+          [(ngModel)]="logupForm.username"
+          id="username"
+          name="username"
+          required
+        />
+      </label>
+
+      <label for="email">
+        <span>Email:</span>
+        <input
+          type="email"
+          [(ngModel)]="logupForm.email"
+          id="email"
+          name="email"
+          required
+        />
+      </label>
+
+      <label for="password">
+        <span>Contraseña:</span>
+        <input
+          type="text"
+          [(ngModel)]="logupForm.password"
+          id="password"
+          name="password"
+          required
+        />
+      </label>
+
+      <label for="confirmPassword">
+        <span>Confirmar contraseña:</span>
+        <input
+          type="text"
+          [(ngModel)]="logupForm.confirmPassword"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+      </label>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+</div>

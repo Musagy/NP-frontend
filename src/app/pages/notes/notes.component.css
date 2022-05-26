@@ -1,0 +1,160 @@
+/* :root {
+} */
+.como-que-angular-pone-un-div-superficial-que-ni-podemos-estilizar-que-mierda-de-framework-tengo-que-hacer-esta-mala-practica {
+  --card_width: 100%;
+  --card_border_radius: 1rem;
+  --row_increment: 4rem;
+
+  width: calc(100% - 40px);
+  height: var(--useful-screen-height);
+  /* background-color: #9baaee; */
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.notes-ctn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 1.5rem;
+  width: 100%;
+  padding: 30px 0;
+  /* margin: 40px auto 0; */
+}
+article {
+  background-color: #080c14;
+  height: 200px;
+  border-radius: var(--card_border_radius);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+article:hover {
+  box-shadow: #889eff55 0px 2px 30px;
+}
+
+h2 {
+  padding: 5px 12px 2px;
+  border-bottom: 4px solid #5b6cb9;
+}
+p {
+  padding: 5px 12px 2px;
+}
+.btn-ctn {
+  display: grid;
+  place-items: center;
+}
+button {
+  background-color: #5b6cb9;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 50px 10px 15px;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+  place-items: center;
+
+  position: relative;
+  color: black;
+  font-weight: 700;
+}
+button span {
+  color: black;
+  font-size: 3rem;
+  position: absolute;
+  top: 1px;
+  right: 13px;
+}
+.button-pri:hover {
+  background-color: #889eff;
+  color: black;
+  box-shadow: #889eff 0px 1px 20px;
+  transform: translateY(2px);
+}
+.logInNowCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+.logInNowCtn img {
+  max-width: 200px;
+}
+.logInNowCtn h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  max-width: 400px;
+  margin: 0;
+  text-align: center;
+}
+.logInNowCtn div {
+  display: flex;
+  gap: 2rem;
+}
+.logInNowCtn div button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+@media (max-width: 600px) {
+  .logInNowCtn div {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.info-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: end;
+  margin-bottom: 5px;
+}
+.info-data p{
+  opacity: 0.5;
+}
+.btn-sec {
+  display: flex;
+  gap: 5px;
+  margin: 0px 12px;
+}
+.btn-sec button {
+  border: none;
+  padding: 2px 0px;
+  border-radius: 50px;
+  border: #ffffff solid 0.5px;
+  font-size: 0.8rem;
+  color: #fff0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+  opacity: 0.6;
+}
+.btn-sec button:hover {
+  color: #fff;
+  opacity: 1;
+}
+.post-m {
+  width: 24px;
+  background-color: #1d73c4;
+}
+.post-d {
+  width: 24px;
+  background-color: #e84056;
+}
+.post-m:hover {
+  width: 56px;
+  
+}
+.post-d:hover {
+  width: 68px;
+}

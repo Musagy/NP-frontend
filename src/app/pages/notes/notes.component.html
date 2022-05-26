@@ -1,0 +1,37 @@
+<div
+  class="como-que-angular-pone-un-div-superficial-que-ni-podemos-estilizar-que-mierda-de-framework-tengo-que-hacer-esta-mala-practica"
+>
+  <div class="notes-ctn" *ngIf="!!isLoggedIn(); else logInNow">
+    <article *ngFor="let note of notes$">
+      <header>
+        <h2>{{ note.title }}</h2>
+        <p>{{ note.content }}</p>
+      </header>
+      <div class="info-data">
+        <p>{{ note.createdAt | date : "short"}}</p>
+        <div class="btn-sec">
+          <button class="post-m" [disabled]="!isLoggedIn()" (click)="editNote(note._id)">Editar</button>
+          <button class="post-d" [disabled]="!isLoggedIn()" (click)="deleteNote(note._id)">Eliminar</button>
+        </div>
+      </div>
+    </article>
+    <div class="btn-ctn">
+      <button routerLink="/create-note" class="button-pri">Create note <span>+</span></button>
+    </div>
+  </div>
+</div>
+
+<ng-template #logInNow>
+  <div class="logInNowCtn">
+    <img src="assets/home.svg" alt="hone image" />
+    <h1>La mente es mala recordando cosas, mejor anota las en esta app.</h1>
+    <div>
+      <button routerLink="/login" class="button-pri">Log In</button>
+      <button routerLink="/logup" class="button-pri">Log up</button>
+    </div>
+  </div>
+</ng-template>
+<!-- {{notes$ | async | json}} -->
+
+<!-- (click)="editNote(note)" -->
+<!-- (click)="deleteNote(note)" -->

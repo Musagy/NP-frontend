@@ -1,0 +1,19 @@
+<header>
+  <nav>
+    <h1 routerLink="/">Notas personales</h1>
+    <ul *ngIf="isLoggedIn(); else logInNow">
+      <!-- <ng-component > -->
+      <li routerLink="/">Home</li>
+      <li routerLink="/create-note">Create note</li>
+      <li (click)="logout()">Log Out</li>
+      <!-- </ng-component> -->
+    </ul>
+  </nav>
+</header>
+
+<ng-template #logInNow>
+  <ul>
+    <li routerLink="/login">Log In</li>
+    <li routerLink="/logup">Log up</li>
+  </ul>
+</ng-template>

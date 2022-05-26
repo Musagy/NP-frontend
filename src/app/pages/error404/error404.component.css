@@ -1,0 +1,22 @@
+img {
+  max-width: 400px;
+}
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+p {
+  font-size: 1.5em;
+  text-align: center;
+}
+.ctn-404 {
+  height: var(--useful-screen-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
