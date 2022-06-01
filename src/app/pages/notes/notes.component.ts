@@ -17,10 +17,18 @@ export class NotesComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.isLoggedIn()) {
-      this.getNotes();
-      console.log("se a solicitado la lista de notas");
+      try {
+        this.getNotes();
+        console.log('se a solicitado la lista de notas');
+      } catch (error) {
+        console.log("No se pudo obtener la lista de notas, posiblemente el token ya venció");
+        localStorage.removeItem('token');
+        this.router.navigate(['/login']);
+      }
     } else {
-      console.log("no se hace la petición de notas por falta de un token de usuario");
+      console.log(
+        'no se hace la petición de notas por falta de un token de usuario'
+      );
     }
   }
   isLoggedIn() {
